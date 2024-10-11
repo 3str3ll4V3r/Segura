@@ -111,6 +111,7 @@ struct InterviewView: View {
             .background(Color(.systemGray6))
         }
         .ignoresSafeArea()
+        .navigationBarBackButtonHidden(true)
     }
 }
 

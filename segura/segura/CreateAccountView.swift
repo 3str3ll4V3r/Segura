@@ -82,13 +82,15 @@ struct CreateAccountView: View {
                              Button(action: {
                                  
                              }){
-                                 Text("Crear Cuenta")
-                                     .font(.system(size: 25, weight:.medium))
-                                     .foregroundColor(.white)
-                                     .padding()
-                                     .background(Color(red:0.95, green: 0.77, blue: 0.75))
-                                     .cornerRadius(30)
-                                     .offset(y:30)
+                                 NavigationLink(destination: Home()) {
+                                     Text("Crear Cuenta")
+                                         .font(.system(size: 25, weight:.medium))
+                                         .foregroundColor(.white)
+                                         .padding()
+                                         .background(Color(red:0.95, green: 0.77, blue: 0.75))
+                                         .cornerRadius(30)
+                                         .offset(y:30)
+                                 }
                                  
                              }
                              HStack{
@@ -132,6 +134,7 @@ struct CreateAccountView: View {
                  
              }
          })
+         .navigationBarBackButtonHidden(true)
      }
  }
 

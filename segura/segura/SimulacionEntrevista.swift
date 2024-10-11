@@ -118,6 +118,7 @@ struct SimulacionEntrevista: View {
                 .background(Color(.systemGray6))
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -104,6 +104,7 @@ struct Home: View {
                 .padding(.vertical, 15)
                 .background(Color(.systemGray6))
             }
+            .navigationBarBackButtonHidden(true)
             
         }
         

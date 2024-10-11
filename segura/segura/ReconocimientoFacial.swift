@@ -118,6 +118,7 @@ struct ReconocimientoFacial: View {
             }
             
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
