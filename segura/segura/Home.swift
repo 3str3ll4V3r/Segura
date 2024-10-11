@@ -70,36 +70,41 @@ struct Home: View {
                 
                 Spacer()
                 
+                
+                
+                Spacer()
+                //Barra de navegación
+                HStack{
+                    Spacer()
+                    Image(systemName: "doc.text")
+                        .foregroundStyle(Color.gray)
+                    
+                    Spacer()
+                    NavigationLink(destination: InterviewView()) {
+                        Image(systemName: "square.grid.2x2")
+                            .foregroundStyle(Color.gray)
+                    }
+                    
+                    Spacer()
+                    Image(systemName: "house")
+                        .foregroundStyle(Color(red: 223/255,
+                            green: 116/255,
+                            blue:125/255))
+                    
+                    Spacer()
+                    Image(systemName: "person")
+                        .foregroundStyle(Color.gray)
+                    
+                    Spacer()
+                    Image(systemName: "rectangle.grid.1x2")
+                        .foregroundStyle(Color.gray)
+                    
+                    Spacer()
+                }
+                .padding(.vertical, 15)
+                .background(Color(.systemGray6))
             }
-            Spacer()
-            //Barra de navegación
-            HStack{
-                Spacer()
-                Image(systemName: "doc.text")
-                    .foregroundStyle(Color.gray)
-                
-                Spacer()
-                Image(systemName: "square.grid.2x2")
-                    .foregroundStyle(Color(red: 223/255,
-                        green: 116/255,
-                        blue:125/255))
-                
-                Spacer()
-                Image(systemName: "house")
-                    .foregroundStyle(Color.gray)
-                
-                Spacer()
-                Image(systemName: "person")
-                    .foregroundStyle(Color.gray)
-                
-                Spacer()
-                Image(systemName: "rectangle.grid.1x2")
-                    .foregroundStyle(Color.gray)
-                
-                Spacer()
-            }
-            .padding(.vertical, 15)
-            .background(Color(.systemGray6))
+            
         }
         
     }
