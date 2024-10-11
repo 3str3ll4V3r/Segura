@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		069AE8442CB9B5CB00C244B8 /* ReconocimientoFacial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069AE8432CB9B5CB00C244B8 /* ReconocimientoFacial.swift */; };
+		069AE8462CB9B5DD00C244B8 /* ReconocimientoVoz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069AE8452CB9B5DD00C244B8 /* ReconocimientoVoz.swift */; };
+		069AE8482CB9B5EA00C244B8 /* SimulacionEntrevista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069AE8472CB9B5EA00C244B8 /* SimulacionEntrevista.swift */; };
 		06A9DA7C2CB73254002D3009 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A9DA7B2CB73254002D3009 /* LoginView.swift */; };
 		06A9DA7E2CB73659002D3009 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A9DA7D2CB73659002D3009 /* CreateAccountView.swift */; };
 		06A9DA802CB74015002D3009 /* InterviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A9DA7F2CB74015002D3009 /* InterviewView.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		069AE8432CB9B5CB00C244B8 /* ReconocimientoFacial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconocimientoFacial.swift; sourceTree = "<group>"; };
+		069AE8452CB9B5DD00C244B8 /* ReconocimientoVoz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconocimientoVoz.swift; sourceTree = "<group>"; };
+		069AE8472CB9B5EA00C244B8 /* SimulacionEntrevista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulacionEntrevista.swift; sourceTree = "<group>"; };
 		06A9DA7B2CB73254002D3009 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		06A9DA7D2CB73659002D3009 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		06A9DA7F2CB74015002D3009 /* InterviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewView.swift; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 		06CC3F082CB4867B0001816A /* segura */ = {
 			isa = PBXGroup;
 			children = (
+				069AE8472CB9B5EA00C244B8 /* SimulacionEntrevista.swift */,
+				069AE8452CB9B5DD00C244B8 /* ReconocimientoVoz.swift */,
+				069AE8432CB9B5CB00C244B8 /* ReconocimientoFacial.swift */,
 				06CC3F092CB4867B0001816A /* seguraApp.swift */,
 				06CC3F0B2CB4867B0001816A /* ContentView.swift */,
 				06A9DA7F2CB74015002D3009 /* InterviewView.swift */,
@@ -273,11 +282,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				06A9DA802CB74015002D3009 /* InterviewView.swift in Sources */,
+				069AE8462CB9B5DD00C244B8 /* ReconocimientoVoz.swift in Sources */,
 				06CC3F0C2CB4867B0001816A /* ContentView.swift in Sources */,
 				06A9DA7C2CB73254002D3009 /* LoginView.swift in Sources */,
+				069AE8442CB9B5CB00C244B8 /* ReconocimientoFacial.swift in Sources */,
 				06CC3F0A2CB4867B0001816A /* seguraApp.swift in Sources */,
 				06A9DA7E2CB73659002D3009 /* CreateAccountView.swift in Sources */,
 				06CC3F362CB49DC90001816A /* Home.swift in Sources */,
+				069AE8482CB9B5EA00C244B8 /* SimulacionEntrevista.swift in Sources */,
 				06CC3F342CB49AA10001816A /* Cursos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
