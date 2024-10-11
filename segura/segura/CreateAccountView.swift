@@ -113,10 +113,12 @@ struct CreateAccountView: View {
                                  Text("¿Ya tienes una cuenta?")
                                      .padding(.horizontal,-7.0)
                                      .padding(.bottom, 0)
-                                 Text(" Iniciar sesión")
-                                     .foregroundColor(Color(red: 223/255,
-                                                      green: 116/255,
-                                                      blue: 125/255))
+                                 NavigationLink(destination: LoginView()) {
+                                     Text(" Iniciar sesión")
+                                         .foregroundColor(Color(red: 223/255,
+                                                                green: 116/255,
+                                                                blue: 125/255))
+                                 }
                                  
                              }
                              

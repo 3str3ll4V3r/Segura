@@ -22,7 +22,7 @@ struct SimulacionEntrevista: View {
                 ZStack{
                     Rectangle()
                         .foregroundColor(.white)
-                        .ignoresSafeArea()
+                        .position(x: 196, y: 350)
                     ZStack{
                         Rectangle()
                             .cornerRadius(40)
@@ -37,27 +37,26 @@ struct SimulacionEntrevista: View {
                                 Text("Bot:")
                                     .foregroundColor(.black)
                                     .font(.system(size:20))
-                                    .padding(.top, -90.0)
+                                    
                                 Text("¿Por qué tus habilidades son importantes para esta empresa?")
                                     .foregroundColor(.black)
                                     .font(.system(size:20))
-                                    .padding(.top, -90.0)
                             }
+                            .padding(.top, 40)
                             HStack{
                                 Image(systemName: "xmark")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 20, height: 20) // Ajusta el tamaño según sea necesario
-                                    .foregroundColor(.black) // Color del ícono
-                                    .padding(.top, 40.0)
+                                    .foregroundColor(.black)
                                     .padding(.trailing, 75.0)
                                 Text("Relajada")
                                     .foregroundColor(.black)
                                     .fontWeight(.bold)
                                     .font(.system(size:20))
-                                    .padding(.top, 40.0)
                                     .padding(.trailing, 110.0)
                             }
+                            .padding(.top,120)
                             
                             HStack{
                                 Image(systemName: "waveform.path")
@@ -65,9 +64,10 @@ struct SimulacionEntrevista: View {
                                     .scaledToFit()
                                     .frame(width: 120, height: 90) // Ajusta el tamaño según sea necesario
                                     .foregroundColor(.cyan) // Color del ícono
-                                    .padding(.top,10.0) // Espaciado adicional si lo desea
+                                // Espaciado adicional si lo desea
                                 
                             }
+                            .padding(.top,10)
                             Button(action: {
                                 
                             }){
@@ -79,23 +79,43 @@ struct SimulacionEntrevista: View {
                                 
                                     .background(Color(red:0.95, green: 0.77, blue: 0.75))
                                     .cornerRadius(30)
-                                    .offset(y:130)
                                 
                             }
+                            .padding(.top, 120)
                             
                         }
                     }
-                    ZStack{
-                        
-                        Rectangle()
-                            .frame(width: 800, height: 100) // Establecer dimensiones del cuadrado
-                            .foregroundColor(Color(red:255/255,
-                                                   green: 250/255,
-                                                   blue: 250/255))
-                            .position(x: 5, y: 730) // Ubicación exacta (coordenadas)
-                            .ignoresSafeArea()
-                    }
+                    
                 }
+                Spacer()
+                //Barra de navegación
+                HStack{
+                    Spacer()
+                    Image(systemName: "doc.text")
+                        .foregroundStyle(Color.gray)
+                    
+                    Spacer()
+                    Image(systemName: "square.grid.2x2")
+                        .foregroundStyle(Color(red: 223/255,
+                            green: 116/255,
+                            blue:125/255))
+                    
+                    Spacer()
+                    Image(systemName: "house")
+                        .foregroundStyle(Color.gray)
+                    
+                    Spacer()
+                    Image(systemName: "person")
+                        .foregroundStyle(Color.gray)
+                    
+                    Spacer()
+                    Image(systemName: "rectangle.grid.1x2")
+                        .foregroundStyle(Color.gray)
+                    
+                    Spacer()
+                }
+                .padding(.vertical, 15)
+                .background(Color(.systemGray6))
             }
         }
     }

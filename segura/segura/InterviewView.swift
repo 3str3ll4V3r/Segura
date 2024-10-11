@@ -65,16 +65,18 @@ struct InterviewView: View {
             Button(action: {
                 
             }){
-                Text("Practicar")
-                    .font(.headline)
-                    .foregroundStyle(Color.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color( red: 223/255,
-                                green: 116/255,
-                                blue:125/255))
-                    .cornerRadius(30)
-                    .padding(.horizontal, 50)
+                NavigationLink(destination: ReconocimientoFacial()) {
+                    Text("Practicar")
+                        .font(.headline)
+                        .foregroundStyle(Color.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color( red: 223/255,
+                                           green: 116/255,
+                                           blue:125/255))
+                        .cornerRadius(30)
+                        .padding(.horizontal, 50)
+                }
             }
             .padding(.top, 120)
             

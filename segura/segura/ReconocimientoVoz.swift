@@ -21,7 +21,7 @@ struct ReconocimientoVoz: View {
             ZStack{
                 Rectangle()
                     .foregroundColor(.white)
-                    .ignoresSafeArea()
+                    .position(x: 196, y: 350)
                 ZStack{
                     Rectangle()
                         .cornerRadius(40)
@@ -38,15 +38,14 @@ struct ReconocimientoVoz: View {
                                 .scaledToFit()
                                 .frame(width: 20, height: 20) // Ajusta el tamaño según sea necesario
                                 .foregroundColor(.black) // Color del ícono
-                                .padding(.top, -215.0)
                                 .padding(.trailing, 70.0)
                             Text("Nerviosa")
                                 .foregroundColor(.black)
                                 .fontWeight(.bold)
                                 .font(.system(size:20))
-                                .padding(.top, -215.0)
                                 .padding(.trailing, 95.0)
                         }
+                        .padding(.top, 30)
                         
                         HStack{
                             Image(systemName: "waveform.path")
@@ -54,9 +53,9 @@ struct ReconocimientoVoz: View {
                                 .scaledToFit()
                                 .frame(width: 120, height: 90) // Ajusta el tamaño según sea necesario
                                 .foregroundColor(.orange) // Color del ícono
-                                .padding(.top,-150) // Espaciado adicional si lo desea
                             
                         }
+                        .padding(.top,50)
                         Button(action: {
                             
                         }){
@@ -66,33 +65,58 @@ struct ReconocimientoVoz: View {
                                 .padding(17.003)
                                 .background(Color(red:0.95, green: 0.77, blue: 0.75))
                                 .cornerRadius(30)
-                                .offset(y:120)
                             
                         }
-                        //NavigationLink(destination: () ){
+                        .padding(.top, 160)
+                        Button(action: {
+                            
+                        }){
+                            //NavigationLink(destination: () ){
                             Text("Continuar con entrevista")
                                 .font(.system(size: 25, weight: .medium))
                                 .foregroundColor(.white)
                                 .padding(13.0)
                                 .background(Color(red: 0.95, green: 0.77, blue: 0.75))
                                 .cornerRadius(30)
-                                .offset(y: 150)
-                        //}
+                            //}
+                        }
+                        .padding(.top, 50)
                     }
-                }
-                ZStack{
                     
-                    Rectangle()
-                        .frame(width: 800, height: 100) // Establecer dimensiones del cuadrado
-                        .foregroundColor(Color(red:255/255,
-                                               green: 250/255,
-                                               blue: 250/255))
-                        .position(x: 5, y: 730) // Ubicación exacta (coordenadas)
-                        .ignoresSafeArea()
+                    }
+                
                 }
+            Spacer()
+            //Barra de navegación
+            HStack{
+                Spacer()
+                Image(systemName: "doc.text")
+                    .foregroundStyle(Color.gray)
+                
+                Spacer()
+                Image(systemName: "square.grid.2x2")
+                    .foregroundStyle(Color(red: 223/255,
+                        green: 116/255,
+                        blue:125/255))
+                
+                Spacer()
+                Image(systemName: "house")
+                    .foregroundStyle(Color.gray)
+                
+                Spacer()
+                Image(systemName: "person")
+                    .foregroundStyle(Color.gray)
+                
+                Spacer()
+                Image(systemName: "rectangle.grid.1x2")
+                    .foregroundStyle(Color.gray)
+                
+                Spacer()
+            }
+            .padding(.vertical, 15)
+            .background(Color(.systemGray6))
             }
         }
-    }
     }
 }
 

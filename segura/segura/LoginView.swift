@@ -65,23 +65,27 @@ struct LoginView: View {
                         
                         Button(action: {
                         }) {
-                            Text("Iniciar Sesión")
-                                .font(.system(size: 20))
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                                .padding()
-                                .frame(width: 340, height: 55.012)
-                                .background(Color(red: 0.95, green: 0.77, blue: 0.75))
-                                .cornerRadius(60)
-                                .shadow(radius: 1.5)
+                            NavigationLink(destination: Home()) {
+                                Text("Iniciar Sesión")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.center)
+                                    .padding()
+                                    .frame(width: 340, height: 55.012)
+                                    .background(Color(red: 0.95, green: 0.77, blue: 0.75))
+                                    .cornerRadius(60)
+                                    .shadow(radius: 1.5)
+                            }
                         }
                         .padding(.horizontal)
                         .padding(.top,25)
                         
                         HStack{
                             Text("¿No tienes cuenta?")
-                            Text("Crea una")
+                            NavigationLink(destination: CreateAccountView()) {
+                                Text("Crea una")
+                            }
                                 .foregroundColor(Color(red: 223/255, green: 116/255, blue: 125/255))
                         }
                         .padding(.top, 50)
