@@ -44,12 +44,14 @@ struct SimulacionEntrevista: View {
                             }
                             .padding(.top, 40)
                             HStack{
-                                Image(systemName: "xmark")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 20, height: 20) // Ajusta el tamaño según sea necesario
-                                    .foregroundColor(.black)
-                                    .padding(.trailing, 75.0)
+                                NavigationLink(destination: InterviewView()) {
+                                    Image(systemName: "xmark")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 20, height: 20) // Ajusta el tamaño según sea necesario
+                                        .foregroundColor(.black)
+                                        .padding(.trailing, 75.0)
+                                }
                                 Text("Relajada")
                                     .foregroundColor(.black)
                                     .fontWeight(.bold)
@@ -71,15 +73,16 @@ struct SimulacionEntrevista: View {
                             Button(action: {
                                 
                             }){
-                                Text("Salir")
-                                    .font(.system(size: 25, weight:.medium))
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 55.003)
-                                    .padding(.vertical, 15.003)
-                                
-                                    .background(Color(red:0.95, green: 0.77, blue: 0.75))
-                                    .cornerRadius(30)
-                                
+                                NavigationLink(destination: InterviewView()) {
+                                    Text("Salir")
+                                        .font(.system(size: 25, weight:.medium))
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal, 55.003)
+                                        .padding(.vertical, 15.003)
+                                    
+                                        .background(Color(red:0.95, green: 0.77, blue: 0.75))
+                                        .cornerRadius(30)
+                                }
                             }
                             .padding(.top, 120)
                             
@@ -95,19 +98,24 @@ struct SimulacionEntrevista: View {
                         .foregroundStyle(Color.gray)
                     
                     Spacer()
-                    Image(systemName: "square.grid.2x2")
-                        .foregroundStyle(Color(red: 223/255,
-                            green: 116/255,
-                            blue:125/255))
+                    NavigationLink(destination: InterviewView()) {
+                        Image(systemName: "square.grid.2x2")
+                            .foregroundStyle(Color(red:223/255,
+                                green: 116/255,
+                                blue:125/255))
+                    }
                     
                     Spacer()
-                    Image(systemName: "house")
-                        .foregroundStyle(Color.gray)
+                    NavigationLink(destination: Home()) {
+                        Image(systemName: "house")
+                            .foregroundStyle(Color.gray)
+                    }
                     
                     Spacer()
-                    Image(systemName: "person")
-                        .foregroundStyle(Color.gray)
-                    
+                    NavigationLink(destination: Perfil()){
+                        Image(systemName: "person")
+                            .foregroundStyle(Color.gray)
+                    }
                     Spacer()
                     Image(systemName: "rectangle.grid.1x2")
                         .foregroundStyle(Color.gray)

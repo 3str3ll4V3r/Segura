@@ -88,26 +88,31 @@ struct InterviewView: View {
                     .foregroundStyle(Color.gray)
                 
                 Spacer()
-                Image(systemName: "square.grid.2x2")
-                    .foregroundStyle(Color(red: 223/255,
-                        green: 116/255,
-                        blue:125/255))
+                NavigationLink(destination: InterviewView()) {
+                    Image(systemName: "square.grid.2x2")
+                        .foregroundStyle(Color(red:223/255,
+                            green: 116/255,
+                            blue:125/255))
+                }
                 
                 Spacer()
-                Image(systemName: "house")
-                    .foregroundStyle(Color.gray)
+                NavigationLink(destination: Home()) {
+                    Image(systemName: "house")
+                        .foregroundStyle(Color.gray)
+                }
                 
                 Spacer()
-                Image(systemName: "person")
-                    .foregroundStyle(Color.gray)
-                
+                NavigationLink(destination: Perfil()){
+                    Image(systemName: "person")
+                        .foregroundStyle(Color.gray)
+                }
                 Spacer()
                 Image(systemName: "rectangle.grid.1x2")
                     .foregroundStyle(Color.gray)
                 
                 Spacer()
             }
-            .padding(.vertical, 15)
+            .padding(.vertical, 30)
             .background(Color(.systemGray6))
         }
         .ignoresSafeArea()
