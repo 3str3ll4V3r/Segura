@@ -86,16 +86,20 @@ struct Home: View {
                     }
                     
                     Spacer()
-                    Image(systemName: "house")
-                        .foregroundStyle(Color(red: 223/255,
-                            green: 116/255,
-                            blue:125/255))
+                    NavigationLink(destination: Home()) {
+                        Image(systemName: "house")
+                            .foregroundStyle(Color(red:223/255,
+                                green: 116/255,
+                                blue:125/255))
+                    }
                     
                     Spacer()
-                    Image(systemName: "person")
-                        .foregroundStyle(Color.gray)
-                    
+                    NavigationLink(destination: Perfil()){
+                        Image(systemName: "person")
+                            .foregroundStyle(Color.gray)
+                    }
                     Spacer()
+                    
                     Image(systemName: "rectangle.grid.1x2")
                         .foregroundStyle(Color.gray)
                     
@@ -104,6 +108,7 @@ struct Home: View {
                 .padding(.vertical, 15)
                 .background(Color(.systemGray6))
             }
+            .navigationBarBackButtonHidden(true)
             
         }
         

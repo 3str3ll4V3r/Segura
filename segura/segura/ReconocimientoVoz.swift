@@ -33,12 +33,14 @@ struct ReconocimientoVoz: View {
                     
                     VStack{
                         HStack{
-                            Image(systemName: "xmark")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20) // Ajusta el tamaño según sea necesario
-                                .foregroundColor(.black) // Color del ícono
-                                .padding(.trailing, 70.0)
+                            NavigationLink(destination: InterviewView()) {
+                                Image(systemName: "xmark")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.black)
+                                    .padding(.trailing, 70.0)
+                            }
                             Text("Nerviosa")
                                 .foregroundColor(.black)
                                 .fontWeight(.bold)
@@ -71,14 +73,14 @@ struct ReconocimientoVoz: View {
                         Button(action: {
                             
                         }){
-                            //NavigationLink(destination: () ){
-                            Text("Continuar con entrevista")
-                                .font(.system(size: 25, weight: .medium))
-                                .foregroundColor(.white)
-                                .padding(13.0)
-                                .background(Color(red: 0.95, green: 0.77, blue: 0.75))
-                                .cornerRadius(30)
-                            //}
+                            NavigationLink(destination: SimulacionEntrevista()){
+                                Text("Continuar con entrevista")
+                                    .font(.system(size: 25, weight: .medium))
+                                    .foregroundColor(.white)
+                                    .padding(13.0)
+                                    .background(Color(red: 0.95, green: 0.77, blue: 0.75))
+                                    .cornerRadius(30)
+                            }
                         }
                         .padding(.top, 50)
                     }
@@ -94,19 +96,24 @@ struct ReconocimientoVoz: View {
                     .foregroundStyle(Color.gray)
                 
                 Spacer()
-                Image(systemName: "square.grid.2x2")
-                    .foregroundStyle(Color(red: 223/255,
-                        green: 116/255,
-                        blue:125/255))
+                NavigationLink(destination: InterviewView()) {
+                    Image(systemName: "square.grid.2x2")
+                        .foregroundStyle(Color(red:223/255,
+                            green: 116/255,
+                            blue:125/255))
+                }
                 
                 Spacer()
-                Image(systemName: "house")
-                    .foregroundStyle(Color.gray)
+                NavigationLink(destination: Home()) {
+                    Image(systemName: "house")
+                        .foregroundStyle(Color.gray)
+                }
                 
                 Spacer()
-                Image(systemName: "person")
-                    .foregroundStyle(Color.gray)
-                
+                NavigationLink(destination: Perfil()){
+                    Image(systemName: "person")
+                        .foregroundStyle(Color.gray)
+                }
                 Spacer()
                 Image(systemName: "rectangle.grid.1x2")
                     .foregroundStyle(Color.gray)
@@ -117,6 +124,7 @@ struct ReconocimientoVoz: View {
             .background(Color(.systemGray6))
             }
         }
+    .navigationBarBackButtonHidden(true)
     }
 }
 

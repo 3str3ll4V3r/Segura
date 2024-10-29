@@ -97,7 +97,7 @@ struct LoginView: View {
                 
             }//zstack grande
         })
-        
+        .navigationBarBackButtonHidden(true)
     }
 }
 #Preview {

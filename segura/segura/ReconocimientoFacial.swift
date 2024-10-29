@@ -36,18 +36,20 @@ struct ReconocimientoFacial: View {
                         
                         VStack{
                             HStack{
-                                Image(systemName: "xmark")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 20, height: 20) // Ajusta el tamaño según sea necesario
-                                    .foregroundColor(.black) // Color del ícono
-                                    .padding(.leading, -100.0)
-                                
+                                NavigationLink(destination: InterviewView()) {
+                                    Image(systemName: "xmark")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 20, height: 20)
+                                        .foregroundColor(.black)
+                                        .padding(.trailing, 66.0)
+                                }
                                 Text("Confiada")
                                     .foregroundColor(.black)
                                     .fontWeight(.bold)
                                     .font(.system(size:20))
                             }
+                            .padding(.trailing, 90.0)
                             Image(systemName: "person")
                                 .resizable()
                                 .scaledToFit()
@@ -72,14 +74,15 @@ struct ReconocimientoFacial: View {
                             Button(action: {
                                 
                             }){
-                                Text("Continuar con voz")
-                                    .font(.system(size: 25, weight:.medium))
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 18.0)
-                                    .padding(.vertical, 15.0)
-                                    .background(Color(red:0.95, green: 0.77, blue: 0.75))
-                                    .cornerRadius(30)
-                                
+                                NavigationLink(destination: ReconocimientoVoz()) {
+                                    Text("Continuar con voz")
+                                        .font(.system(size: 25, weight:.medium))
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal, 18.0)
+                                        .padding(.vertical, 15.0)
+                                        .background(Color(red:0.95, green: 0.77, blue: 0.75))
+                                        .cornerRadius(30)
+                                }
                             }
                             .padding(.top, 30)
                         }
@@ -94,19 +97,24 @@ struct ReconocimientoFacial: View {
                         .foregroundStyle(Color.gray)
                     
                     Spacer()
-                    Image(systemName: "square.grid.2x2")
-                        .foregroundStyle(Color(red: 223/255,
-                            green: 116/255,
-                            blue:125/255))
+                    NavigationLink(destination: InterviewView()) {
+                        Image(systemName: "square.grid.2x2")
+                            .foregroundStyle(Color(red:223/255,
+                                green: 116/255,
+                                blue:125/255))
+                    }
                     
                     Spacer()
-                    Image(systemName: "house")
-                        .foregroundStyle(Color.gray)
+                    NavigationLink(destination: Home()) {
+                        Image(systemName: "house")
+                            .foregroundStyle(Color.gray)
+                    }
                     
                     Spacer()
-                    Image(systemName: "person")
-                        .foregroundStyle(Color.gray)
-                    
+                    NavigationLink(destination: Perfil()){
+                        Image(systemName: "person")
+                            .foregroundStyle(Color.gray)
+                    }
                     Spacer()
                     Image(systemName: "rectangle.grid.1x2")
                         .foregroundStyle(Color.gray)
@@ -118,6 +126,7 @@ struct ReconocimientoFacial: View {
             }
             
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
